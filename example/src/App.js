@@ -37,8 +37,10 @@ export default function App() {
     <React.Fragment>
       <GlobalStyle />
       <Header>
-        <Title>react-input-emoji</Title>
-        <Subtitle>A React input that supports emojis</Subtitle>
+        <Title data-cy="title">react-input-emoji</Title>
+        <Subtitle data-cy="subtitle">
+          A React input that supports emojis
+        </Subtitle>
         <Subtitle color="white">
           <EmojiInput>
             <span role="img" aria-label="heart eyes">
@@ -65,6 +67,7 @@ export default function App() {
         </Subtitle>
         <GithubButtons>
           <iframe
+            data-cy="gitWatch"
             src="https://ghbtns.com/github-btn.html?user=cesarwbr&amp;repo=react-input-emoji&amp;type=watch&amp;count=true&amp;size=large"
             frameBorder="0"
             scrolling="0"
@@ -73,6 +76,7 @@ export default function App() {
             title="Github stars"
           />
           <iframe
+            data-cy="gitFork"
             src="https://ghbtns.com/github-btn.html?user=cesarwbr&amp;repo=react-input-emoji&amp;type=fork&amp;count=true&amp;size=large"
             frameBorder="0"
             scrolling="0"
@@ -98,10 +102,10 @@ export default function App() {
           After install import the react-input-emoji component to display your
           input with emoji support like so:
         </Description>
-        <Example>
+        <Example data-cy="exampleInput">
           <ExampleInput />
         </Example>
-        <Snippet>
+        <Snippet data-cy="exampleCode">
           <Code>
             <ExampleCode />
           </Code>
@@ -114,7 +118,7 @@ export default function App() {
               <TableTh>Description</TableTh>
             </tr>
           </thead>
-          <tbody>
+          <tbody data-cy="propsTable">
             <TableTr>
               <TableTd>
                 <Code>value</Code>
@@ -234,14 +238,17 @@ export default function App() {
           </tbody>
         </Table>
       </Main>
-      <Footer>
+      <Footer data-cy="footerData">
         <Credits>
           Made by{" "}
-          <FooterLink href="https://github.com/cesarwbr">
+          <FooterLink data-cy="gitCesar" href="https://github.com/cesarwbr">
             Cesar William
           </FooterLink>{" "}
           under{" "}
-          <FooterLink href="https://cesarwilliam.mit-license.org/">
+          <FooterLink
+            data-cy="mitCesar"
+            href="https://cesarwilliam.mit-license.org/"
+          >
             MIT license
           </FooterLink>
         </Credits>

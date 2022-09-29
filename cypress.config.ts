@@ -1,0 +1,20 @@
+import { defineConfig } from "cypress";
+
+export default defineConfig({
+  e2e: {
+    /* 
+    dbConnection: {
+    user: "postgres",
+    host: "localhost",
+    database: "postgres",
+    password: "Loremipsumdolorsitamet",
+    port: 5432,
+  }, */
+    video: false,
+    screenshotOnRunFailure: false,
+    watchForFileChanges: false,
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    }
+  }
+});

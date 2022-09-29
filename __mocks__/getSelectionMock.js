@@ -13,9 +13,9 @@ export function mockGetSelection(value) {
       selectNodeContents: jest.fn(),
       setEnd: jest.fn(),
       toString: jest.fn(() => ({
-        length: value.length
-      }))
-    }))
+        length: value.length,
+      })),
+    })),
   }));
   document.getSelection = jest.fn().mockReturnValue({ anchorNode, getRangeAt });
 }
